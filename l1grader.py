@@ -25,7 +25,7 @@ def test_builtin(mock_print):
     try:
         calculate_calories(age_years,weight_pounds,heart_bpm,time_minutes)
         mock_print.assert_called_with('Calories: 653.71')
-        return 10
+        return 5
     except Exception as ex:
         return 0
 
