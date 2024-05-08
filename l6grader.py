@@ -104,7 +104,7 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         
     try:
         u = uniq_(lst)
-        if u.sort() == [1, 3, 4, 5, 6, 1000].sort():
+        if u.sort() == [1, 3, 4, 5, 6].sort():
             grade += 1
             print('uniq_() is correct')
         else:
