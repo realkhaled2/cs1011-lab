@@ -64,7 +64,7 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         pass  
             
     try:
-        if remove_(lst).sort() == [1, 3, 4, 5, 5, 6, 6].sort():
+        if remove_(clst).sort() == [1, 3, 4, 5, 5, 6, 6].sort():
             grade += 1
             print('remove_() is correct')
         else:
@@ -74,7 +74,7 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         
         
     try:
-        if append_(lst,1000).sort() == [1, 3, 4, 5, 5, 6, 6, 1000].sort():
+        if append_(clst,1000).sort() == [1, 3, 4, 5, 5, 6, 6, 1000].sort():
             grade += 1
             print('append_() is correct')
         else:
@@ -92,7 +92,8 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         pass
         
     try:
-        if set_(lst) == {3,5}:
+        s = set_(lst)
+        if s[0]== 3 and s[1] == 5:
             grade += 2
             print('set_() is correct')
         else:
