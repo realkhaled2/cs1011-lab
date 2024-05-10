@@ -52,7 +52,7 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         else:
             print('max_() is not correct')
     except Exception as ex:
-        pass
+        print('max_() is not correct')
         
     try:
         if sum_(lst) == 33:
@@ -61,7 +61,7 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         else:
             print('sum_() is not correct')
     except Exception as ex:
-        pass  
+        print('sum_() is not correct')  
             
     try:
         if remove_(clst).sort() == [1, 3, 4, 5, 5, 6, 6].sort():
@@ -70,36 +70,36 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         else:
             print('remove_() is not correct')
     except Exception as ex:
-        pass
+        print('remove_() is not correct')
         
         
     try:
-        if append_(clst,1000).sort() == [1, 3, 4, 5, 5, 6, 6, 1000].sort():
+        if append_(lst.copy(),1000).sort() == [1, 3, 3, 4, 5, 5, 6, 6, 1000].sort():
             grade += 1
             print('append_() is correct')
         else:
             print('append_() is not correct')
     except Exception as ex:
-        pass
+        print('append_() is not correct')
     
     try:
-        if math.isclose(average_(lst),sum(lst)/len(lst)) == True:
+        if int(average_(lst)) == (sum(lst)//len(lst)):
             grade += 1
             print('average_() is correct')
         else:
             print('average_() is not correct')
     except Exception as ex:
-        pass
+        print('average_() is not correct')
         
     try:
-        s = set_(lst)
-        if s[0]== 3 and s[1] == 5:
+        s = set_(lst.copy())
+        if ((s[0] == 3) and (s[1] == 4)):
             grade += 2
             print('set_() is correct')
         else:
             print('set_() is not correct')
     except Exception as ex:
-        pass
+        print('set_() is not correct')
         
         
     try:
@@ -110,18 +110,18 @@ def test_part2(max_,sum_,remove_,append_,average_,set_,uniq_,replace_):
         else:
             print('uniq_() is not correct')
     except Exception as ex:
-        pass
+        print('uniq_() is not correct')
         
         
     try:
-        rlst = replace_(lst)
+        rlst = replace_(lst.copy())
         if rlst[0] == -1:
             grade += 2
             print('replace_min() is correct')
         else:
             print('replace_min() is not correct')
     except Exception as ex:
-        pass
+        print('replace_min() is not correct')
     return grade
     
 def test():
