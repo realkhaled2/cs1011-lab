@@ -17,40 +17,40 @@ def test_part1(alphabetical_order):
     
     
     try:
-        lst = ['a','b','c']
-        ord_lst = alphabetical_order(lst)
+        f='b';s='c'; t='a'
+        f,s,t = alphabetical_order('b','c','a')
         #print(ord_lst)
-        if ord_lst == ['a','b','c']:
+        if f=='a' and s=='b' and t=='c':
             grade1 += 5
-            print(f'test1 with input {lst}.... pass')
+            print(f'test1 with input {'b','c','a'}.... pass')
         else:
-            print(f'test1 with input {lst}.... fail')
+            print(f'test1 with input {'b','c','a'}.... fail')
     except Exception as ex:
         pass
         
     
     
     try:
-        lst = ['c','b','a']
-        ord_lst = alphabetical_order(lst)
+        f='c';s='b'; t='a'
+        f,s,t = alphabetical_order(f,s,t)
         #print(ord_lst)
-        if ord_lst == ['a','b','c']:
+        if f=='a' and s=='b' and t=='c':
             grade1 += 2.5
-            print(f'test2 with input {lst}.... pass')
+            print(f'test2 with input {'c','b','a'}.... pass')
         else:
-            print(f'test2 with input {lst}.... fail')
+            print(f'test2 with input {'c','b','a'}.... fail')
     except Exception as ex:
         pass
     
     try:
-        lst = ['c','a','b']
-        ord_lst = alphabetical_order(lst)
+        f='c';s='a'; t='b'
+        f,s,t = alphabetical_order(f,s,t)
         #print(ord_lst)
-        if ord_lst == ['a','b','c']:
+        if f=='a' and s=='b' and t=='c':
             grade1 += 2.5
-            print(f'test2 with input {lst}.... pass')
+            print(f'test3 with input {'c','a','b'}.... pass')
         else:
-            print(f'test2 with input {lst}.... fail')
+            print(f'test3 with input {'c','a','b'}.... fail')
     except Exception as ex:
         pass
     
@@ -63,26 +63,29 @@ def test_part2(count_odd):
     
     grade2 = 0
     
-    lst = [1,2,3,4]
+    a=1;b=2;c=3;d=4
     try:
-        output = count_odd(lst)
+        output = count_odd(a,b,c,d)
         if output == 2:
             grade2 += 5
-            print(f'test1 with input {lst}....     pass')
+            print(f'test1 with input {a,b,c,d}....     pass')
         else:
-            print(f'test1 with input {lst}....     fail')
+            print(f'test1 with input {a,b,c,d}....     fail')
     except Exception as ex:
         pass
         
-    lst = [19,19,19,19]
+    a=19
+    b=19
+    c=19
+    d=19
         
     try:
-        output = count_odd(lst)
+        output = count_odd(a,b,c,d)
         if output == 4:
             grade2 += 5
-            print(f'test2 with input {lst}.... pass')
+            print(f'test2 with input {a,b,c,d}.... pass')
         else:
-            print(f'test2 with input {lst}.... fail')
+            print(f'test2 with input {a,b,c,d}.... fail')
     except Exception as ex:
         pass
     
